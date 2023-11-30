@@ -1,4 +1,9 @@
 from shiny import App, Inputs, Outputs, Session, reactive, render, ui, req
+import json
+
+# read survey.json file
+with open("survey.json", 'r') as file:
+    data = json.load(file)
 
 
 def record_observation():
@@ -10,34 +15,27 @@ def record_observation():
                 ui.input_selectize(
                     "location",
                     label="Select the location",
-                    choices=["Eden Landing", "Bair Island", "Alviso Marina"],
+                    choices=data["location"],
                 ),
                 ui.input_checkbox_group(
                     "surveyors",
                     "Choose Surveyor(s)*:",
-                    {
-                        "Cole": "Cole",
-                        "Eric": "Eric",
-                        "Hop": "Hop",
-                        "Kaili": "Kaili",
-                        "Karan": "Karan",
-                        "Sirena": "Sirena",
-                    },
+                    data["surveyors"],
                 ),
                 ui.input_selectize(
                     "plot",
                     label="Select the plot",
-                    choices=["P1", "P2", "P3", "P4"],
+                    choices=data["plots"],
                 ),
                 ui.input_selectize(
                     "survey_point",
                     label="Select the survey point",
-                    choices=["PTF1", "PTF2", "PTF3", "PTF4"],
+                    choices=data["survey_points"],
                 ),
                 ui.input_selectize(
                     "survey_side",
                     label="Select the side",
-                    choices=["Slough side", "Pond side"],
+                    choices=data["survey_side"],
                 ),
                 ui.input_selectize("specimen", label="Specimen", choices={}),
                 ui.input_slider(

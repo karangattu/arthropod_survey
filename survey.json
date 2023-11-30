@@ -1,0 +1,14 @@
+{
+  "surveyors": {
+    "Cole": "Cole",
+    "Eric": "Eric",
+    "Hop": "Hop",
+    "Kaili": "Kaili",
+    "Karan": "Karan",
+    "Sirena": "Sirena"
+  },
+  "location": ["Eden Landing", "Bair Island", "Alviso Marina"],
+  "plots": ["P1", "P2", "P3", "P4"],
+  "survey_points": ["PTF1", "PTF2", "PTF3", "PTF4"],
+  "survey_side": ["Slough side", "Pond side"]
+}
