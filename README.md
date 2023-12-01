@@ -53,3 +53,7 @@ def get_airtable_data():
         "observation_table_name": "<observation_table_name>",
     }
 ```
+### Deploying your shiny app
+
+You can deploy your shinyapp on the internet so it can be accessed by the public. There are many ways to do this, which are covered [here](https://shiny.posit.co/py/docs/deploy.html#deploy-to-shinyapps.io-cloud-hosting)
+Personally, I prefer `shinyapps.io` route since it allows free account creation and it is easy to deploy with the provided documentation.
